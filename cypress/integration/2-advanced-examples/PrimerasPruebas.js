@@ -21,7 +21,7 @@
     })*/
      
     //Caso de prueba 2
-    /*it('Agregar el elemento de tipo "blouse" al carrito de compra desde la pagina principal', function(){
+    it('Agregar el elemento de tipo "blouse" al carrito de compra desde la pagina principal', function(){
      
          // ingresamos a la pagina
          cy.visit("http://automationpractice.com/index.php")
@@ -46,7 +46,7 @@
         
         })
         cy.get('h2 > .ajax_cart_product_txt').should('contain.text','There is 1 item in your cart.').should('be.visible')
-    })*/
+    })
     //Caso de prueba 3
      it('Verificamos que el drop down de women, tenga los elementos necesarios', function(){
         cy.visit("http://automationpractice.com/index.php")
