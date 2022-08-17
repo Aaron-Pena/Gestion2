@@ -1,5 +1,5 @@
 describe("Segunda evidencia ", function () {
-  
+  //nuevo push
 
   it("Encontrar y agregar una algo al carrito de compra", function () {
       //ingresamos a la pagina
@@ -30,6 +30,7 @@ describe("Segunda evidencia ", function () {
           cy.log('Se agrego un item al carrito o wishlist');
           //lo agregamos al carrito de compras
           cy.get("@Carrito").click();
+          cy.get('.a-padding-extra-large > .a-spacing-small').should('contains.text','Sign in')
           
 
         });
