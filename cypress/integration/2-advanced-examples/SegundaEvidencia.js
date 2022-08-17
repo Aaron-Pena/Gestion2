@@ -1,23 +1,24 @@
 describe("Segunda practica ",function(){
 //entrar a la pagina
-  
- it('Encontrar y agregar una camisa desde la pagina de inicio', function(){
-    cy.visit("acid.com.mx") 
+
+it('Encontrar y agregar una camisa desde la pagina de inicio', function(){
+    cy.visit("https://malaracha.com/") 
+    
 //conseguir contenedor
-cy.get('#featured-products-165661793050c01cd4 > .container > :nth-child(1) > .grid-row-collection > .widget-product > .products-grid').as('Camisas')
+cy.get('#CollectionSection-16240833728b7a4b5b').as('Camisas')
 cy.get('@Camisas')
 
-        .find('.product-title')
+        .find('.grid-product__title')
         .each(($el,index, $list) => {
-            cy.get('@Camisas').find('.price-regular').then(function($el1){
+            cy.get('@Camisas').find('.grid-product__price').then(function($el1){
                 let precio = $el1.text()
                 cy.log(precio)
         //////////////////////
-            if($el.attr('.product-title') === 'Playera Nanana Anya ' && precio.includes('299.00')){
+            if($el.attr('.grid-product__title') === 'HÉROES DEL SILENCIO - MALDITO DUENDE - MUJER ' && precio.includes('299.00')){
                 cy.log('Se ha encontrado el elemento buscado')
                 cy.log('Se ha encontrado el precio buscado')
                 
-                cy.get('@Camisas').eq(index).contains('Agregar +').click()
+                cy.get('@Camisas').eq(index).contains('HÉROES DEL SILENCIO - MALDITO DUENDE - MUJER ').click()
             }
         })
         
