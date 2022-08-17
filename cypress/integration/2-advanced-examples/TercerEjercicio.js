@@ -30,6 +30,7 @@ describe('Tercer ejercico de pruebas',function()
         //Iteramos para encontrar un producto con nombre x
          cy.get('@Producto')
         .find('.s-card-container')
+        
         .each(($el,index, $list)=>{
             if($el.attr('title') === 'Roku Streaming Stick 4K 2021 | Streaming Device 4K/HDR/Dolby Vision with Roku Voice Remote and TV Controls'){
                 cy.log('Se ha encontrado el elemento buscado')
