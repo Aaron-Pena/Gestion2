@@ -25,9 +25,12 @@ describe("Segunda evidencia ", function () {
           cy.get("@Producto").click();
           cy.get("#wishListMainButton > .a-button-inner > .a-button-text").as(
             "Carrito"
+            
           );
+          cy.log('Se agrego un item al carrito o wishlist');
           //lo agregamos al carrito de compras
           cy.get("@Carrito").click();
+          
 
         });
     });
@@ -49,9 +52,6 @@ cy.get('#nav-al-your-account > a:nth-child(8) > span').should('be.visible')
 cy.get('#nav-al-your-account > a:nth-child(9) > span').should('be.visible')
 cy.get('#nav-al-your-account > a:nth-child(10) > span').should('be.visible')
 cy.get('#nav-al-your-account > a:nth-child(11) > span').should('be.visible')
-
-
-
 
   });
 
